@@ -1,0 +1,7 @@
+.default-content {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}

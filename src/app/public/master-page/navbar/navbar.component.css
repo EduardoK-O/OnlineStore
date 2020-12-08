@@ -1,0 +1,18 @@
+.nav-bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 90px;
+  height: 90px;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul > li {
+  list-style-type: none;
+  margin-left: 1rem;
+}
