@@ -1,18 +1,21 @@
-.nav-bar {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+.navbar {
+  height: 128px;
+  font-family: var(--font-primary);
+  padding: 79px;
 }
 .logo {
   width: 90px;
   height: 90px;
+  margin-right: 142px;
 }
 
-.nav-bar ul {
-  display: flex;
+.nav-item{
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.nav-bar ul > li {
-  list-style-type: none;
-  margin-left: 1rem;
+.form-control {
+  width: 400px;
+  height: 40px;
 }
+

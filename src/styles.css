@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /*  Add your CSS variables here! */
+  --dark-blue: #0B1E37;
+  --white: #ffffff;
+  --light-red: #E9335D;
+  --black: #000000;
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+}
+body {
+  margin: 0;
+}
