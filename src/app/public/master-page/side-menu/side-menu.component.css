@@ -1,6 +1,33 @@
 .side-menu {
   display: flex;
-  width: 200px;
+  width: 310px;
   height: 100%;
+  justify-content: center;
+  margin-top: 116px;
+  margin-left: 16px;
+}
+
+.list-group a{
+  display: flex;
+  justify-content: space-between;
+}
+
+a img, a figure {
+  height: 25px;
   margin: 0;
+}
+
+.side-menu .list-group {
+  width: 90%;
+}
+
+.list-group .categories-title {
+  display: flex;
+  background-color: dimgrey;
+  color: white;
+  justify-content: center;
+}
+
+.badge {
+  background-color: dimgray;
 }
