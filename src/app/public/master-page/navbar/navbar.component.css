@@ -1,12 +1,12 @@
 .navbar {
   height: 128px;
   font-family: var(--font-primary);
-  padding: 79px;
+  padding: 64px 79px;
 }
-.logo {
-  width: 90px;
+.logo img{
+  width: 172px;
   height: 90px;
-  margin-right: 142px;
+  margin-right: 32px;
 }
 
 .nav-item{
