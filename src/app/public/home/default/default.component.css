@@ -5,3 +5,7 @@
   flex-direction: column;
   align-content: center;
 }
+
+.carousel-item {
+  height: 32rem;
+}
