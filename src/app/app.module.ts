@@ -17,7 +17,6 @@ import { PromotionsComponent } from './public/home/promotions/promotions.compone
     AppComponent,
     DefaultComponent,
     NavbarComponent,
-    SideMenuComponent,
     HeroComponent,
     FooterComponent,
     CarouselComponent,
