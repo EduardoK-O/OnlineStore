@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 :root {
   /*  Add your CSS variables here! */
   --dark-blue: #0B1E37;
@@ -10,4 +11,17 @@
 }
 body {
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+
+    font-family: 'Dosis', sans-serif;
+
 }
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700');
+
+
+
+    
+
+
+
