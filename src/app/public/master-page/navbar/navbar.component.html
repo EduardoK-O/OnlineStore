@@ -1,6 +1,6 @@
 <header class="main-header">
   <!-- Start Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+  <nav class="navbar navbar-expand-lg navbar-light  navbar-default bootsnav">
       <div class="container">
           <!-- Header Navigation -->
           <div class="navbar-header">
@@ -15,7 +15,7 @@
           <div class="collapse navbar-collapse" id="navbar-menu">
               <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                   <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="">Tienda</a></li>
+                  <li class="nav-item"><a class="nav-link" routerLink="/tienda" routerLinkActive="active">Tienda</a></li>
                   <li class="nav-item"><a class="nav-link" href="">Contactanos</a></li>
               </ul>
           </div>
@@ -24,28 +24,19 @@
           <!--  Atribute Navigation -->
           <div class="attr-nav">
               <ul>
-                  <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                   <li class="side-menu">
-        <a href="#">
-          <i class="fa fa-shopping-bag"></i>
-          <span class="badge"></span>
-          <p>Mi carrito</p>
-        </a>
-      </li>
+                        <a href="#">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span class="badge"></span>
+                        <p>Mi carrito</p>
+                        </a>
+                    </li>
               </ul>
           </div>
           <!-- Atribute Navigation -->
       </div>
-      <!-- Side Menu -->
-      <div class="side">
-          <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-          <li class="cart-box">
-              <ul class="cart-list">
-                  
-              </ul>
-          </li>
-      </div>
-      <!-- Side Menu -->
+      
   </nav>
   <!-- Navigation -->
 </header>
+<router-outlet></router-outlet>

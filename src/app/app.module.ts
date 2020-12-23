@@ -11,6 +11,7 @@ import { FooterComponent } from './public/master-page/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './public/home/carousel/carousel.component';
 import { PromotionsComponent } from './public/home/promotions/promotions.component';
+import { CatalogoComponent } from './public/catalogo/catalogo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PromotionsComponent } from './public/home/promotions/promotions.compone
     HeroComponent,
     FooterComponent,
     CarouselComponent,
-    PromotionsComponent
+    PromotionsComponent,
+    CatalogoComponent
   ],
   imports: [
     BrowserModule,
