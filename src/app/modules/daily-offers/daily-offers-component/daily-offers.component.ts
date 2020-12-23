@@ -11,7 +11,7 @@ export class DailyOffersComponent implements OnInit {
   constructor(private FindProductsService: FindProductsService) { }
 
   ngOnInit(): void {
-    this.FindProductsService.findProducts('tv').then((response) => {
+    this.FindProductsService.findProducts('iphone').then((response) => {
       console.log(response);
       alert(response.shopping_results[0].title);
     }, (error) => {

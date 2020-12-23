@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BestSellersRoutingModule } from './best-sellers-routing.module';
 import { BestSellersComponent } from './best-sellers-component/best-sellers/best-sellers.component';
-import { SharedModule } from '../shared/shared/shared.module';
+import { SharedModule } from '../shared/shared-module/shared.module';
 
 
 @NgModule({
