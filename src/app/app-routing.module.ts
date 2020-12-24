@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './public/home/default/default.component';
-import{CatalogoComponent} from './modules/store/catalogo/catalogo.component';
 
 const routes: Routes = [
   {
@@ -12,6 +11,11 @@ const routes: Routes = [
   {
     path: 'tienda',
     loadChildren: () => import('./modules/store/store.module').then(m => m.StoreModule)
+  },
+
+  {
+    path: 'shopping-cart',
+    loadChildren: () => import('./modules/shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule)
   },
 
   {
