@@ -2,6 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './public/home/default/default.component';
 
+import{CatalogoComponent} from './modules/store/catalogo/catalogo.component';
+
+import { ShoppingCartComponent } from './modules/shopping-cart/shopping-cart/shopping-cart.component';
+import { ContactFormComponent } from './modules/contacto/contact-form/contact-form.component';
+
+
 const routes: Routes = [
   {
     path: 'home',
@@ -14,8 +20,13 @@ const routes: Routes = [
   },
 
   {
-    path: 'shopping-cart',
-    loadChildren: () => import('./modules/shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule)
+    path: 'carrito',
+    component: ShoppingCartComponent
+  },
+
+  {
+    path: 'contacto',
+    component: ContactFormComponent
   },
 
   {

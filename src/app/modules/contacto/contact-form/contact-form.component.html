@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="well well-sm">
+          <form class="form-horizontal" action="" method="post">
+          <fieldset>
+            <legend class="text-center">Contactanos</legend>
+    
+            <!-- Name input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Nombre</label>
+              <div class="col-md-9">
+                <input id="name" name="name" required pattern="^[a-zA-Z]+$" #name type="text" placeholder="Tu nombre" class="form-control">
+              </div>
+            </div>
+    
+            <!-- Email input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email">Email</label>
+              <div class="col-md-9">
+                <input id="email" required email #email name="email" type="text" placeholder="email@ejemplo.com" class="form-control">
+              </div>
+            </div>
+    
+            <!-- Message body -->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="message">Mensaje</label>
+              <div class="col-md-9">
+                <textarea class="form-control" required minlength="10" required maxlenght="100" #mensaje id="message" name="message" placeholder="Por favor escribe tu mensaje..." rows="5"></textarea>
+              </div>
+            </div>
+    
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+          </form>
+           
+        </div>
+      </div>
+	</div>
+</div>
