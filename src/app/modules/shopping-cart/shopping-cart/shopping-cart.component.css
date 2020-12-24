@@ -1,0 +1,14 @@
+body {
+    background:#eee;
+    min-height: 100vh;
+  }
+
+
+  .p-5 {
+    margin-top: 20px;
+}
+
+.pb-5, .py-5 {
+    background-color: #eee;
+}
+  
