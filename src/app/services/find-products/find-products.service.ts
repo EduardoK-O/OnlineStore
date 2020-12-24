@@ -20,7 +20,7 @@ export class FindProductsService {
         resolve(this.cachedValues[query]);
       }
       else {
-        this.http.get('https://api.scaleserp.com/search?api_key=42D3E8B73DB24E079D207A21FF884A3D&q='+query+'&search_type=shopping')
+        this.http.get('https://api.scaleserp.com/search?api_key=BFC5CBE2CFDD4583B47F23C5B2C99DD2&q='+query+'&search_type=shopping')
         .toPromise()
         .then( (response) => {
           resolve(response as ProductListInterface)
