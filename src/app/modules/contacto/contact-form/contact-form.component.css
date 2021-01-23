@@ -26,3 +26,7 @@ body {padding-top:20px;
 legend{
     margin-left: 200px;
 }
+
+input.ng.invalid{
+    border-color:red;
+}

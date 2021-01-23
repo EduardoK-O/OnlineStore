@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './public/home/default/default.component';
+import {ProductosComponent} from './modules/productos/productos.component';
+import {AgregarProductoComponent} from "./modules/agregar-producto/agregar-producto.component";
+
+
 
 import{CatalogoComponent} from './modules/store/catalogo/catalogo.component';
 
 import { ShoppingCartComponent } from './modules/shopping-cart/shopping-cart/shopping-cart.component';
 import { ContactFormComponent } from './modules/contacto/contact-form/contact-form.component';
+
 
 
 const routes: Routes = [
@@ -48,7 +53,9 @@ const routes: Routes = [
     path: 'find-us',
     loadChildren: () => import('./modules/locations/locations.module').then(m => m.LocationsModule)
   },
-
+  {path: 'productos', component: ProductosComponent},
+  {path: 'productos/agregar', component: AgregarProductoComponent},
+ 
   {
     path: '',
     pathMatch: 'full',

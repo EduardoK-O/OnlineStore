@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DefaultComponent } from './public/home/default/default.component';
@@ -10,6 +9,29 @@ import { FooterComponent } from './public/master-page/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './public/home/carousel/carousel.component';
 import { PromotionsComponent } from './public/home/promotions/promotions.component';
+import {MatSliderModule} from '@angular/material/slider';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {ProductosComponent} from 'src/app/modules/productos/productos.component';
+import {AgregarProductoComponent} from 'src/app/modules/agregar-producto/agregar-producto.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {FormsModule} from "@angular/forms";
+import {MatCardMdImage, MatCardModule} from "@angular/material/card";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatChipsModule} from "@angular/material/chips";
+import {MatBadgeModule} from "@angular/material/badge";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatStepperModule} from "@angular/material/stepper";
 
 @NgModule({
   declarations: [
@@ -19,12 +41,38 @@ import { PromotionsComponent } from './public/home/promotions/promotions.compone
     HeroComponent,
     FooterComponent,
     CarouselComponent,
-    PromotionsComponent
+    PromotionsComponent,
+    ProductosComponent,
+    AgregarProductoComponent,
+   
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatInputModule,
+    FormsModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatGridListModule,
+    MatChipsModule,
+    MatBadgeModule,
+    MatMenuModule,
+    MatStepperModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

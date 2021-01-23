@@ -1,0 +1,9 @@
+input[type="file"] {
+  margin: 10px 0;
+}
+
+
+.matInput{
+  background-color: eee;
+  border-color: black;
+}
