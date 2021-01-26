@@ -1,0 +1,44 @@
+.preview-container{
+  background-color: #eee;
+}
+.preview-image{
+  margin: 5% 10%;
+}
+
+img {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+h1 {
+  font-weight: bolder;
+}
+
+.preview-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buy{
+	background-color: transparent;
+	color: #434444;
+	border-radius: 0;
+	border: 1px solid #434444;
+	width: 50%;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+.buy:hover{
+	background-color: #434444;
+	color: #fff;
+}
+
+.preview-bottom{
+  margin: 36px 0px 0px 0px;
+}
+
+p{
+  padding: 36px;
+  margin-bottom: 0;
+}

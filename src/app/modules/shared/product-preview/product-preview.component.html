@@ -1,1 +1,15 @@
-<p>product-preview works!</p>
+<div class="preview-container">
+  <div class="preview-top">
+    <div *ngFor="let foto of product.fotos" class="preview-image">
+      <img src="http://localhost:3000/images/{{foto.foto}}" class="w-100">
+    </div>
+    <div class="preview-attributes">
+      <h1 class="text-center">{{product.nombre}}</h1>
+      <h3 class="text-center">Precio: ${{product.precio}}</h3>
+      <a href="#" class="btn buy">Agregar al carrito</a>
+    </div>
+  </div>
+  <div class="preview-bottom">
+    <p class="text-center">{{product.descripcion}}</p>
+  </div>
+</div>

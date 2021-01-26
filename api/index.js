@@ -100,14 +100,13 @@ app.get('/productos_con_fotos', async (req, res) => {
 });
 
 app.get('/producto/:id', async (req, res) => {
-  console.log(req.params.id);
   if (!req.params.id) {
     res.end("not found");
     return;
   }
   const producto = await productoModel.obtenerPorId(req.params.id);
   producto.fotos = await productoModel.obtenerFotos(req.params.id);
-  res.json(producto);
+  res.json({"producto" : producto});
 });
 
 app.get('/images/:id', async (req, res) => {

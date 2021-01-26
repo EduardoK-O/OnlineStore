@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FindProductsService } from 'src/app/services/find-products/find-products.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { FindProductsService } from 'src/app/services/find-products/find-product
 })
 export class CatalogoComponent implements OnInit {
 
-  constructor(private FindProductsService: FindProductsService) { }
+  constructor(private router: Router, private FindProductsService: FindProductsService) { }
   products = [];
   page = 1;
   pageSize = 6;
@@ -29,4 +30,14 @@ export class CatalogoComponent implements OnInit {
       alert("Error " + error.statusText);
     })
   }
+
+  redirectTo(uri:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+    this.router.navigate([uri]));
+ }
+
+ previewProduct(id: number){
+  this.FindProductsService.setProductId(id);
+  this.router.navigateByUrl('/tienda/producto');
+ }
 }

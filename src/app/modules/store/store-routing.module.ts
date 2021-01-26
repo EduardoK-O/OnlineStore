@@ -10,7 +10,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'productos',
+    path: 'producto',
     component: ProductPreviewComponent
   }
 ];

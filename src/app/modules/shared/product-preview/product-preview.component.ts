@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FindProductsService } from 'src/app/services/find-products/find-products.service';
 
 @Component({
   selector: 'app-product-preview',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductPreviewComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private FindProductsService: FindProductsService) { }
+  product;
   ngOnInit(): void {
+    this.FindProductsService.findProduct(this.FindProductsService.productId.toString()).then((response) => {
+      console.log(response.producto);
+      this.product = response.producto;
+    }, (error) => {
+      alert("Error " + error.statusText);
+    })
   }
 
 }
