@@ -99,15 +99,19 @@ app.get('/productos_con_fotos', async (req, res) => {
   res.json({ "shopping_results" : productos});
 });
 
-app.get('/producto/id', async (req, res) => {
+app.get('/producto/:id', async (req, res) => {
   console.log(req.params.id);
-  if (!req.query.id) {
+  if (!req.params.id) {
     res.end("not found");
     return;
   }
   const producto = await productoModel.obtenerPorId(req.params.id);
   producto.fotos = await productoModel.obtenerFotos(req.params.id);
   res.json(producto);
+});
+
+app.get('/images/:id', async (req, res) => {
+  res.sendFile(path.join(DIRECTORIO_FOTOS, req.params.id));
 });
 
 app.listen(PUERTO, err => {
