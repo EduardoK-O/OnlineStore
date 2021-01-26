@@ -1,28 +1,28 @@
 <mat-card>
   <h1>Agregar producto</h1>
   <p>
-    <mat-form-field>
-      <label for="productoModel.nombre">Nombre</label>
+    <mat-form-field class="full-width">
+      <mat-label for="productoModel.nombre">Nombre</mat-label>
       <input matInput [(ngModel)]="productoModel.nombre"
              type="text"
              >
     </mat-form-field>
   </p>
   <p>
-    <mat-form-field>
-      <label for="productoModel.descripcion">Descripcion</label>
+    <mat-form-field class="full-width">
+      <mat-label for="productoModel.descripcion">Descripcion</mat-label>
       <textarea rows="10" matInput [(ngModel)]="productoModel.descripcion"></textarea>
     </mat-form-field>
   </p>
   <p>
-    <mat-form-field>.
-      <label for="productoModel.Precio">Precio</label>
+    <mat-form-field class="full-width">
+      <mat-label for="productoModel.Precio">Precio</mat-label>
       <input matInput [(ngModel)]="productoModel.precio"
              type="number"
              >
     </mat-form-field>
   </p>
-  <label for="fotos">Fotos</label>
+  <mat-label for="fotos">Fotos</mat-label>
   <br>
   <input accept="image/png,image/jpeg" #foto required id="fotos" multiple type="file">
   <p>

@@ -1,5 +1,8 @@
-<h1>Productos</h1>
-<button (click)="navegarAFormulario()" mat-button color="accent" mat-raised-button>Agregar producto</button>
+<div class="agregar-productos-header">
+  <h1>Productos</h1>
+<button (click)="openDialog()" mat-button color="accent" mat-raised-button>Agregar producto</button>
+</div>
+<div class="table-container">
 <table class="mat-elevation-z13" *ngIf="productos.length>0" mat-table [dataSource]="productos">
   <ng-container matColumnDef="nombre">
     <mat-header-cell *matHeaderCellDef>Nombre</mat-header-cell>
@@ -24,3 +27,4 @@
   <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
   <mat-row *matRowDef="let row; columns: columnas;"></mat-row>
 </table>
+</div>

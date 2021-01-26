@@ -96,16 +96,17 @@ app.get('/productos', async (req, res) => {
 });
 app.get('/productos_con_fotos', async (req, res) => {
   const productos = await productoModel.obtenerConFotos();
-  res.json(productos);
+  res.json({ "shopping_results" : productos});
 });
 
-app.get('/producto', async (req, res) => {
+app.get('/producto/id', async (req, res) => {
+  console.log(req.params.id);
   if (!req.query.id) {
     res.end("not found");
     return;
   }
-  const producto = await productoModel.obtenerPorId(req.query.id);
-  producto.fotos = await productoModel.obtenerFotos(req.query.id);
+  const producto = await productoModel.obtenerPorId(req.params.id);
+  producto.fotos = await productoModel.obtenerFotos(req.params.id);
   res.json(producto);
 });
 
@@ -115,6 +116,6 @@ app.listen(PUERTO, err => {
     console.error("Error escuchando: ", err);
     return;
   }
-  
+
   console.log(`Escuchando en el puerto :${PUERTO}`);
 });

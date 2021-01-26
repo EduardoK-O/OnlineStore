@@ -21,17 +21,19 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {ProductosComponent} from 'src/app/modules/productos/productos.component';
+import {DialogOverview, ProductosComponent} from 'src/app/modules/productos/productos.component';
 import {AgregarProductoComponent} from 'src/app/modules/agregar-producto/agregar-producto.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCardMdImage, MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatBadgeModule} from "@angular/material/badge";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatStepperModule} from "@angular/material/stepper";
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,7 @@ import {MatStepperModule} from "@angular/material/stepper";
     PromotionsComponent,
     ProductosComponent,
     AgregarProductoComponent,
-   
+    DialogOverview
 
   ],
   imports: [
@@ -72,7 +74,11 @@ import {MatStepperModule} from "@angular/material/stepper";
     MatBadgeModule,
     MatMenuModule,
     MatStepperModule,
-
+    ReactiveFormsModule
+  ],
+  exports: [RouterModule],
+  entryComponents:[
+    DialogOverview
   ],
   providers: [],
   bootstrap: [AppComponent]

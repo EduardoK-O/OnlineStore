@@ -7,3 +7,13 @@ input[type="file"] {
   background-color: eee;
   border-color: black;
 }
+
+.full-width {
+  width: 100%;
+}
+
+mat-card {
+  width: 50%;
+  align-self: center;
+  margin: 100px;
+}
