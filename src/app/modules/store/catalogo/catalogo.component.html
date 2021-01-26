@@ -10,8 +10,7 @@
       <div class="col-md-4 product-grid" *ngFor="let product of products | slice: (page-1) * pageSize : page * pageSize">
 				<div class="image">
 					<a href="tienda/productos">
-            <img [src]="product.foto"  class="w-100">
-            <img src = "http://localhost:3000/fotos_productos/90708ce8-e2b9-44e1-a2f6-42d656697242.jpg" class="w-100">
+            <img src="http://localhost:3000/images/{{product.foto}}"  class="w-100">
 						<div class="overlay">
 							<div class="detail">Ver detalles</div>
 						</div>
