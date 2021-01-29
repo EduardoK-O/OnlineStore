@@ -1,4 +1,5 @@
-
+import { AuthService } from 'src/app/modules/Login/auth/services/auth.service';
+import { Router } from '@angular/router';
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Producto} from "src/app/services/Producto/producto"
 import {ProductosService} from "src/app/services/productos/productos.service";

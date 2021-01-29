@@ -1,14 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { DefaultComponent } from './public/home/default/default.component';
-import { NavbarComponent } from './public/master-page/navbar/navbar.component';
-import { HeroComponent } from './public/master-page/hero/hero.component';
-import { FooterComponent } from './public/master-page/footer/footer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CarouselComponent } from './public/home/carousel/carousel.component';
-import { PromotionsComponent } from './public/home/promotions/promotions.component';
+import { CommonModule } from '@angular/common';
+import { AgregarProductoRoutingModule } from 'src/app/modules/agregar-producto/agregar-producto.routing.module';
+
 import {MatSliderModule} from '@angular/material/slider';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -31,33 +24,13 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatBadgeModule} from "@angular/material/badge";
 import {MatMenuModule} from "@angular/material/menu";
-import {MatStepperModule} from "@angular/material/stepper";
-import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { AuthModule } from './modules/Login/auth/auth.module';
-
-
+import {MatStepperModule} from "@angular/material/stepper"
 @NgModule({
-  declarations: [
-    AppComponent,
-    DefaultComponent,
-    NavbarComponent,
-    HeroComponent,
-    FooterComponent,
-    CarouselComponent,
-    PromotionsComponent,
-    DialogOverview,
-    AppComponent,
-    
-
-  ],
+  declarations: [AgregarProductoComponent],
   imports: [
-    
-    BrowserModule,
-    AuthModule,
-    AppRoutingModule,
-    NgbModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    AgregarProductoRoutingModule,
+    MatButtonModule,
     MatSliderModule,
     MatSidenavModule,
     MatToolbarModule,
@@ -79,16 +52,9 @@ import { AuthModule } from './modules/Login/auth/auth.module';
     MatMenuModule,
     MatStepperModule,
     ReactiveFormsModule,
-    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     
-  ],
-  exports: [RouterModule],
-  entryComponents:[
-    DialogOverview
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ]
 })
-export class AppModule { }
+export class AgregarProductoModule { }
