@@ -3,9 +3,10 @@ const express = require("express"),
   path = require("path"),
   app = express(),
   productoModel = require("./productos_model"),
+  userModel= require("./users_model"),
   formidable = require("formidable"),
   fs = require("fs");
-const {v4: uuidv4} = require("uuid")
+const {v4: uuidv4} = require("uuid");
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const randtoken = require('rand-token');
@@ -14,6 +15,7 @@ const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 const refreshTokens = {};
 const cors = require('Cors');
+const conexion = require("./conexion");
 const SECRET = 'VERY_SECRET_KEY!';
 const passportOpts = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
@@ -22,7 +24,7 @@ const passportOpts = {
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "http://localhost:4200");
   res.header("Access-Control-Allow-Credentials", "true");
-  res.header("Access-Control-Allow-Headers", "*");
+  res.header("Access-Control-Allow-Headers", "Content-Type, *" );
   res.header("Access-Control-Allow-Methods", "GET,,HEAD,PUT,POST,DELETE");
   next();
 });
@@ -43,16 +45,50 @@ passport.serializeUser(function (user, done) {
   done(null, user.username)
 });
 
+app.post('/signup', async (req,res)=>{
+  const user = req.body;
+  const respuesta = await userModel.insertar(user.name, user.username, user.password, user.rol);
+  res.json(respuesta);
+});
+
+
+
+
+
 app.post('/login', function (req, res) { 
-    const {username, password} = req.body;
-    const user = { 
-        'username': username, 
-        'role': 'admin'
-    };
-    const token = jwt.sign(user, SECRET, { expiresIn: 600 }) 
-    const refreshToken = randtoken.uid(256);
-    refreshTokens[refreshToken] = username;
-    res.json({jwt: token, refreshToken: refreshToken});
+    
+ 
+  let username = req.body.username;
+  let password=req.body.password;
+  
+
+  
+		conexion.query('SELECT username, password FROM users WHERE username = ? AND password= ?' , [username, password], function(error, results, fields) {
+      console.log(results);
+      if (results.length>0) {
+        
+        const user={
+    
+          "username": this.username,
+          "password" : this.password
+        }
+       
+        const token = jwt.sign(user, SECRET, { expiresIn: 600 }) 
+        const refreshToken = randtoken.uid(256);
+        refreshTokens[refreshToken] = username;
+        res.json({jwt: token, refreshToken: refreshToken});
+
+
+
+			} else {
+        console.log("usuario incorrecto");
+				res.sendStatus(403);
+			}			
+			
+		});
+	
+
+
 });
 
 app.post('/logout', function (req, res) { 
@@ -161,6 +197,8 @@ app.post('/producto', async (req, res) => {
   const respuesta = await productoModel.insertar(producto.nombre, producto.descripcion, producto.precio);
   res.json(respuesta);
 });
+
+
 
 app.get('/productos', async (req, res) => {
   const productos = await productoModel.obtener();

@@ -41,9 +41,7 @@ module.exports = {
         async (err, resultados) => {
           if (err) reject(err);
           else {
-            /*
-              Si existe un dios, que me disculpe por este no-optimizado e ineficiente fragmento de código
-             */
+           
             for (let x = 0; x < resultados.length; x++) {
               resultados[x].foto = await this.obtenerPrimeraFoto(resultados[x].id);
             }

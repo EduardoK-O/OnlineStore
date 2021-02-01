@@ -1,0 +1,37 @@
+
+    <h1>Registro de usuarios</h1>
+    <p>
+      <mat-form-field class="full-width">
+        <mat-label for="userModel.name">Nombre</mat-label>
+        <input matInput [(ngModel)]="userModel.name"
+               type="text"
+               >
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="full-width">
+        <mat-label for="userModel.username">username</mat-label>
+        <textarea rows="1" matInput [(ngModel)]="userModel.username"></textarea>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="full-width">
+        <mat-label for="userModel.password">Contraseña</mat-label>
+        <input matInput [(ngModel)]="userModel.password"
+               type="password"
+               >
+      </mat-form-field>
+    </p>
+    <mat-form-field class="full-width">
+      <mat-label for="userModel.rol">Rol</mat-label>
+      <input matInput [(ngModel)]="userModel.rol"
+             type="text"
+             >
+    </mat-form-field>
+  
+    <p>
+      <button mat-button text="registro" (click)="guardar()">Registrarse</button>
+      <a routerLink="/login" mat-raised-button color="primary" style="margin-left: 10px">ir a inicio de sesion</a>
+
+    </p>
+  

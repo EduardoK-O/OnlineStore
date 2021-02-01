@@ -59,6 +59,12 @@ const routes: Routes = [
     },
 
     {
+        path:'signup',
+        loadChildren: () => import('src/app/modules/signup/signup.module').then(m=>m.SignupModule),  
+    },
+
+
+    {
       path: 'login',
       component: LoginComponent,
       canActivate: [AuthGuard]

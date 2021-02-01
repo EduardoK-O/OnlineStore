@@ -22,7 +22,7 @@ export class ProductosComponent implements OnInit {
   }
 
   async eliminar(producto) {
-    if (!confirm("¿Realmente lo quieres eliminar<?")) {
+    if (!confirm("¿Realmente lo quieres eliminar?")) {
       return;
     }
     await this.productosService.eliminarProducto(producto.id);

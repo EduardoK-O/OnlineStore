@@ -12,7 +12,8 @@ import { AuthService } from './services/auth.service';
 import { RandomGuard } from './guards/random.guard';
 import { TokenInterceptor } from './token.interceptor';
 import{ProductosGuard} from 'src/app/modules/Login/auth/guards/productos.guard'
-import{AgregarProductoGuard} from 'src/app/modules/Login/auth/guards/agregar-producto.guard'
+import{AgregarProductoGuard} from 'src/app/modules/Login/auth/guards/agregar-producto.guard';
+
 
 
 @NgModule({

@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       username: [''],
-      password: ['']
+      password: [''],
+      rol:['']
     });
   }
 
@@ -27,12 +28,16 @@ export class LoginComponent implements OnInit {
     this.authService.login(
       {
         username: this.f.username.value,
+
         password: this.f.password.value
+        
       }
     )
     .subscribe(success => {
       if (success) {
-        this.router.navigate(['/secret-random-number']);
+        this.router.navigate(['/admin']);
+      }else{
+        alert("usuario no encontrado");
       }
     });
   }
